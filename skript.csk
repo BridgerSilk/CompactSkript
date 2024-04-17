@@ -1,0 +1,45 @@
+-/ define a variable with the player's location
+cmd /saveloc ?txt:
+  cmd.als: /savelocation
+  cmd.prm: loc.command
+  cmd.prmmsg: You don't have permission to execute this command!
+  cmd.tr:
+    i. arg 1 i.. st:
+      i. arg 1 i.. "save":
+        i. p hs prm "loc.save":
+          ! ^loc.$player$~ -> p,s e-l
+          ! ^_num~ -> a rnd int btwn 1 ++ 50
+          s "Your location has been saved to $^loc.$player$~$" -> p
+          wt 10 tk
+          s "Re-run the command if the location is not correct!" -> p
+          s "$^_num~$ is a random number cuz why not" -> p
+      i. arg 1 i.. "get":
+        i. p hs prm "loc.get":
+          s "Your location is saved as $^loc.$player$~$" -> p
+        el:
+          s "No permission!" -> p
+    el i. arg 1 i.. nt st:
+      s "Missing arguments!" -> p
+          
+
+cmd /test ?txt ?num:
+  cmd.tr:
+    opn av g -> p
+    ! ^$e-p$.online~ -> y
+
+// bl br:
+  i. bl abv p i.. air:
+    cle
+  el:
+    stp
+
+cmd /setlobby:
+  cmd.prm: op
+  cmd.tr:
+    ! ^lobby.pos~ -> pos o. p
+    s "&aLobby set!" -> p
+
+cmd /lobby:
+  cmd.tr:
+    tp p -> ^lobby.pos~
+    s "&aTeleporting you to lobby!" -> p

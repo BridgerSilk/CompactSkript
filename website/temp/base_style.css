@@ -1,0 +1,156 @@
+/* Static Base Page Code - start (Constant for all pages) */
+
+:root{
+    --text: #FFFFFF;
+    --primary: #C44D9C;
+    --bg: #08060B;
+    --fg: #1A1A1A;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: var(--text);
+    background: radial-gradient(circle at left, #2b1122, 30%, #08060B);
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+*{
+    scroll-behavior: smooth;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav img{
+    width: 48px;
+    height: 48px;
+    align-self: flex-start;
+}
+
+nav{
+    top: 0;
+    position: sticky;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 600px;
+    padding: 12px 128px 12px 128px;
+    background-color: rgba(26, 26, 26, 0.8);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(55, 55, 55, 0.8);
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: var(--primary);
+}
+
+.selected{
+    color: var(--primary);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    align-self: flex-end;
+    align-items: center;
+    margin: 16px;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--fg);
+    position: absolute;
+    padding: 64px 128px 64px 128px;
+}
+
+.footer-brand-big-text{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--text);
+    margin: 0;
+}
+
+.footer-brand-credits a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer-brand-credits a:hover{
+    text-decoration: underline;
+}
+
+.footer-brand-credits{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer-brand{
+    display: flex;
+    gap: 24px;
+}
+
+.footer-brand-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer div img{
+    width: 86px;
+    height: 86px;
+}
+
+footer{
+    display: flex;
+    gap: 800px;
+    align-items: center;
+    border-top: 1px solid rgba(55, 55, 55, 0.8);
+}
+
+.footer-links{
+    display: flex;
+    gap: 48px;
+}
+
+.footer-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links ul li a{
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-link-header{
+    font-weight: 500;
+    font-size: 20px;
+}
+/* Static Base Page Code - end */
+
+
+
+/* Dynamic Page Code - start */

@@ -1,0 +1,25 @@
+{
+  "name": "csk",
+  "displayName": "Compact Skript",
+  "description": "Compact Skript Programming Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "csk",
+      "aliases": ["Compact Skript", "csk"],
+      "extensions": [".csk"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "csk",
+      "scopeName": "source.csk",
+      "path": "./syntaxes/csk.tmLanguage.json"
+    }]
+  }
+}

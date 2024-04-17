@@ -1,0 +1,45 @@
+# define a variable with the player's location
+command /saveloc <text>:
+  aliases: /savelocation
+  permission: loc.command
+  permission message: You don't have permission to execute this command!
+  trigger:
+    if arg 1 is set:
+      if arg 1 is "save":
+        if player has permission "loc.save":
+          set {loc.%player%} to player's event-location
+          set {_num} to a random integer between 1 and 50
+          send "Your location has been saved to %{loc.%player%}%" to player
+          wait 10 ticks
+          send "Re-run the command if the location is not correct!" to player
+          send "%{_num}% is a random number cuz why not" to player
+      if arg 1 is "get":
+        if player has permission "loc.get":
+          send "Your location is saved as %{loc.%player%}%" to player
+        else:
+          send "No permission!" to player
+    else if arg 1 is not set:
+      send "Missing arguments!" to player
+          
+
+command /test <text> <number>:
+  trigger:
+    open anvil gui to player
+    set {%event-player%.online} to true
+
+on block break:
+  if block above player is air:
+    cancel event
+  else:
+    stop
+
+command /setlobby:
+  permission: op
+  trigger:
+    set {lobby.pos} to position of player
+    send "&aLobby set!" to player
+
+command /lobby:
+  trigger:
+    teleport player to {lobby.pos}
+    send "&aTeleporting you to lobby!" to player

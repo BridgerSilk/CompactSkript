@@ -1,0 +1,42 @@
+Should get replaced:
+cmd aaaa
+cmd /test
+cmd oohhhh
+yee cmd test cmd
+/wow cmd
+
+Should not get replaced:
+TestCmd
+CMD
+/cmd
+/CMD
+
+Test Skript:
+
+cmd /test-cmd:
+  tr:
+    s "Hello World" to p
+
+
+-/ define a variable with the player's location
+cmd /saveloc ?txt:
+  cmd.als: /savelocation
+  cmd.prm: loc.command
+  cmd.prmmsg: You don't have permission to execute this command!
+  cmd.tr:
+    if arg 1 is set:
+      if arg 1 is "save":
+        if player has permission "loc.save":
+          set {loc.%player%} to player's event-location
+          set {_num} to a random integer between 1 and 50
+          send "Your location has been saved to %{loc.%player%}%" to player
+          wait 10 ticks
+          send "Re-run the command if the location is not correct!" to player
+          send "%{_num}% is a random number cuz why not" to player
+      if arg 1 is "get":
+        if player has permission "loc.get":
+          send "Your location is saved as %{loc.%player%}%"
+        else:
+          send "No permission!" to player
+    else if arg 1 is not set:
+      send "Missing arguments!" to player
