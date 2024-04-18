@@ -141,6 +141,9 @@ mappings_general = {
     "rw": "rows",
     "gui.title": "with name",
     "nm": "named",
+    "abrb": "absorbed",
+    "rep": "loop",
+    "": "loop",
     "lr": "lore"
 }
 
@@ -173,4 +176,39 @@ mappings_syntax_events = {
 mappings_syntax_math = {
     "y": "true",
     "n": "false",
-} 
+}
+
+# Does not check for spaces
+mappings_syntax_functions = {
+    "f.abs": "abs",
+    "f.acos": "acos",
+    "f.asin": "asin",
+    "f.atan": "atan",
+    "f.atan2": "atan2",
+    "f.calcexp": "calcExperience",
+    "f.ceil": "ceil",
+    "f.ceiling": "ceiling",
+    "f.clamp": "clamp",
+    "f.cos": "cos",
+    "f.date": "date",
+    "f.exp": "exp",
+    "f.floor": "floor",
+    "f.nonum": "isNaN",
+    "f.nlog": "ln",
+    "f.loc": "location",
+    "f.log": "log",
+    "f.max": "max",
+    "f.min": "min",
+    "f.mod": "mod",
+    "f.offpl": "offlineplayer",
+    "f.pl": "player",
+    "f.prod": "product",
+    "f.rgb": "rgb",
+    "f.round": "round",
+    "f.sin": "sin",
+    "f.sqrt": "sqrt",
+    "f.sum": "sum",
+    "f.tan": "tan",
+    "f.vec": "vector",
+    "f.world": "world",
+}
