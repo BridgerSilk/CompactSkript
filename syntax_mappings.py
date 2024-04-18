@@ -210,5 +210,5 @@ mappings_syntax_functions = {
     "f.sum": "sum",
     "f.tan": "tan",
     "f.vec": "vector",
-    "f.world": "world",
+    "f.world": "world"
 }

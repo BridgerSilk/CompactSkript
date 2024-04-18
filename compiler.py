@@ -8,6 +8,7 @@ from syntax_mappings import mappings_general
 from syntax_mappings import mappings_syntax_types
 from syntax_mappings import mappings_syntax_events
 from syntax_mappings import mappings_syntax_math
+from syntax_mappings import mappings_syntax_functions
 import math
 
 # Checks if there are spaces or nothing around a word:
@@ -44,6 +45,10 @@ def convert_syntax():
     for key, value in mappings_syntax_math.items():
         pattern = re.compile(rf'(^|\s){re.escape(key)}(\s|$)')
         content = pattern.sub(fr'\1{value}\2', content)
+# Does NOT check for spaces
+    for key, value in mappings_syntax_functions.items():
+        pattern = re.compile(rf'{re.escape(key)}')
+        content = pattern.sub(fr'{value}', content)
     
 def process_file(input_file, output_file):
     global content
