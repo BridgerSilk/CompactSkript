@@ -1,5 +1,5 @@
 # CompactSkript
-### A Programming Language made for Minecraft Server Development based on Skript
+### A Programming Language made for Minecraft Server Development based on [Skript](https://github.com/SkriptLang/Skript)
 
 
 **Features:**
