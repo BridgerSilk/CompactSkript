@@ -15,13 +15,13 @@
 
 
 ## External Compiler (Python)
-<button style="padding:10px; border:2px solid black; border-radius:8px; background-color:darkgray; cursor:pointer;"><a style="color:lightgreen; text-decoration:none;">Download Python Compiler</a></button>
+[Download Python Compiler](https://test.test)
 
 ## Internal Compiler (Java Bukkit Plugin)
-<button style="padding:10px; border:2px solid black; border-radius:8px; background-color:darkgray; cursor:pointer;"><a style="color:lightgreen; text-decoration:none;">Download Java Compiler (Plugin)</a></button>
+[Download Java Compiler (Plugin)](https://test.test)
 
 ## Our Website
-<button style="padding:10px; border:2px solid black; border-radius:8px; background-color:darkgray; cursor:pointer;"><a style="color:lightgreen; text-decoration:none;">Visit Website</a></button>
+[Visit Website](https://test.test)
 
 ## Documentation
-<button style="padding:10px; border:2px solid black; border-radius:8px; background-color:darkgray; cursor:pointer;"><a style="color:lightgreen; text-decoration:none;">View the Documentation</a></button>
+[View the Documentation](https://test.test)
